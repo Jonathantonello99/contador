@@ -19,6 +19,12 @@ jobs:
         with:
           node-version: 22
       - run: npm install
+      - name: Diagnostico React
+          run: |
+            echo "=== REACT INSTALADO ==="
+            npm ls react react-dom
+            echo "=== PACKAGE ==="
+            cat package.json
       - name: Verificar React
         run: npm ls react react-dom
       - run: npm run build
